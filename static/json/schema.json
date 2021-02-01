@@ -1,0 +1,396 @@
+[
+{
+	"id": 0,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Caretaker", "30:0", "", []],
+			["Memento", "0:180", "", ["-state",""]],
+			["Originator", "100:10", "", ["-state","+setMemento (in m : Memento)\n+createMemento()"]]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow_romb parent_0","",""]],
+			[["o_right tr t0 dashed arrow parent_1","",""]]
+		]
+	}
+},{
+	"id":1,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Client","20:0", "", []],
+			["interface\nHandler", "0:80", "", ["+handleRequest()"]],
+			["Concrete\nHandler1", "120:10", "", ["+handleRequest()"]],
+			["Concrete\nHandler2", "120:160", "", ["+handleRequest()"]]
+		],
+		"kids": [
+			[["o_right tr t90 solid arrow parent_1","",""]],
+			[["o_right tl t270 solid arrow parent_1","top:25%;left:100%;","width:70px;height:30px;","successor"]],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":2,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["interface\nSubject","0:0", "", ["+attach(in o:Observer)","+detach(in o:Observer)","+notify()"]],
+			["interface\nObserver", "20:220", "", ["+update()"]],
+			["ConcreteSubject", "160:0", "", ["-subjectState",""]],
+			["ConcreteObserver", "160:180", "", ["-observerState","+update()"]]
+		],
+		"kids": [
+			[["o_right tr t90 solid arrow parent_1","","","notifies"]],
+			[],
+			[["o_top tl t0 solid arrow_full parent_0","",""]],
+			[["o_top tl t0 solid arrow_full parent_1","",""],["o_left tl t270 solid arrow parent_2","","","observes"]]
+		]
+	}
+},{
+	"id":3,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Client","0:0", "", []],
+			["Invoker", "0:160", "", []],
+			["ConcreteCommand", "70:50", "", ["+execute()"]],
+			["Receiver", "170:0", "", ["+action()"]],
+			["Command", "170:160", "", ["+execute()"]]
+		],
+		"kids": [
+			[["o_bottom bl t180 solid arrow parent_3","left:25%;",""],["o_bottom br t90 dashed arrow parent_2","",""],["o_right tr t90 solid arrow parent_1","",""]],
+			[],
+			[["o_left bl t180 solid arrow parent_3","",""],["o_bottom br t90 solid arrow_full parent_4","",""]],
+			[],
+			[["o_top tl t0 solid arrow_romb parent_1","",""]]
+		]
+	}
+},{
+	"id":4,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Context", "0:0", "", ["+request()"]],
+			["interface\nState", "40:110", "", ["+handle()"]],
+			["ConcreteState1", "140:30", "", ["+handle()"]],
+			["ConcreteState2", "140:160", "", ["+handle()"]]
+		],
+		"kids": [
+			[],
+			[["o_top tl t270 solid arrow_romb parent_0","",""]],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":5,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Client","0:0", "", []],
+			["Context", "50:0", "", []],
+			["interface\nAbstractExpression", "50:100", "", ["+interpret()"]],
+			["Terminal\nExpression", "150:10", "", ["+interpret() : Context"]],
+			["Nonterminal\nExpression", "150:170", "", ["+interpret() : Context"]]
+		],
+		"kids": [
+			[["o_bottom bl t180 solid arrow parent_1","",""],["o_right br t180 solid arrow parent_2","",""]],
+			[],
+			[["o_right br t180 solid arrow_romb parent_4","",""]],
+			[["o_top tc t0 solid arrow_full parent_2","",""]],
+			[]
+		]
+	}
+},{
+	"id":6,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Context", "0:0", "", [""]],
+			["interface\nStrategy", "40:110", "", ["+execute()"]],
+			["ConcreteStrategyA", "150:10", "", ["+execute()"]],
+			["ConcreteStrategyB", "150:150", "", ["+execute()"]]
+		],
+		"kids": [
+			[],
+			[["o_top tl t270 solid arrow_romb parent_0","",""]],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":7,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Client","0:130", "", []],
+			["interface\nAggregate", "60:20", "", ["+createIterator()"]],
+			["interface\nIterator", "60:190", "", ["+next()"]],
+			["concreteAggregate", "150:0", "", ["+createIterator() : Context"]],
+			["ConcreteIterator", "150:170", "", ["+next() : Context"]]
+		],
+		"kids": [
+			[["o_left bl t180 solid arrow parent_1","",""],["o_right br t180 solid arrow parent_2","",""]],
+			[],
+			[],
+			[["o_top tl t0 solid arrow_full parent_1","",""]],
+			[["o_top tl t0 solid arrow_full parent_2","",""]]
+		]
+	}
+},{
+	"id":8,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["AbstractClass","0:0", "", ["+templateMethod()","#subMethod()"]],
+			["ConcreteClass", "140:10", "", ["+subMethod()"]]
+		],
+		"kids": [
+			[],
+			[["o_top tl t0 solid arrow_full parent_0","",""]]
+		]
+	}
+},{
+	"id":9,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["Mediator", "10:10", "", []],
+			["interface\nColleague", "0:150", "", []],
+			["Concrete\nMediator", "110:0", "", []],
+			["Concrete\nColleague", "110:150", "", []]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow parent_0","","","informs"]],
+			[["o_top tl t0 solid arrow_full parent_0","",""],["o_right tr t90 solid arrow parent_3","","","updates"]],
+			[["o_top tl t0 solid arrow parent_1","",""]]
+		]
+	}
+},{
+	"id":10,
+	"style": "#ccff9a",
+	"schema": {
+		"base": [
+			["interface Visitor", "0:0", "", ["+visitElementA (in a : ConcreteElementA)","+visitElementB (in b : ConcreteElementB)"]],
+			["Client", "20:280", "", []],
+			["ConcreteVisitor", "90:0", "", ["+visitElementA\n(in a : ConcreteElementA)","+visitElementB\n(in b : ConcreteElementB)"]],
+			["interface\nElement", "90:200", "", ["+accept(in v : Visitor)"]],
+			["ConcreteElementA", "200:120", "", ["+accept(in v : Visitor)"]],
+			["ConcreteElementB", "200:260", "", ["+accept(in v : Visitor)"]]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow parent_0","",""],["o_bottom br t180 solid arrow parent_3","",""]],
+			[["o_top tl t0 solid arrow_full parent_0","",""]],
+			[],
+			[["o_top tc t0 solid arrow_full parent_3","",""]],
+			[]
+		]
+	}
+},{
+	"id":11,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["interface\nAdapter", "20:20", "", ["+operation()"]],
+			["Client", "40:170", "", []],
+			["ConcreteAdapter", "120:0", "", ["-adaptee","+operation()"]],
+			["Adapter", "130:140", "", ["+adaptedOperation()"]]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow parent_0","",""]],
+			[["o_top tl t0 solid arrow_full parent_0","",""],["o_right tr t90 solid arrow parent_3","",""]],
+			[]
+		]
+	}
+},{
+	"id":12,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["Client", "0:0", "", []],
+			["interfaceSubject", "40:80", "", ["+request()"]],
+			["RealSubject", "130:0", "", ["+request()"]],
+			["Proxy", "130:170", "", ["+request()"]]
+		],
+		"kids": [
+			[["o_right br t180 solid arrow parent_1","",""]],
+			[],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[["o_left tl t270 solid arrow parent_2","","","represents"]]
+		]
+	}
+},{
+	"id":13,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["Abstraction", "0:0", "", ["+operation()"]],
+			["interface\nImplementor", "60:70", "", ["+operationImpl()"]],
+			["Concrete\nImplementorA", "170:0", "", ["+operationImpl()"]],
+			["Concrete\nImplementorB", "170:130", "", ["+operationImpl()"]]
+		],
+		"kids": [
+			[],
+			[["o_top tl t270 solid arrow_romb parent_0","",""]],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":14,
+	"style": "#98cdff",
+	"schema": {
+		"base": [
+			["Client", "0:110", "", []],
+			["interface\nAbstractFactory", "40:0", "", ["+createProductA()","+createProductB()"]],
+			["interface\nAbstractProduct", "60:150", "", []],
+			["ConcreteFactory", "160:0", "", ["+createProductA()","+createProductB()"]],
+			["ConcreteProduct", "185:150", "", []]
+		],
+		"kids": [
+			[["o_left bl t180 solid arrow parent_1","",""],["o_right br t180 solid arrow parent_2","",""]],
+			[],
+			[],
+			[["o_top tl t0 solid arrow_full parent_1","",""]],
+			[["o_top tl t0 solid arrow_full parent_2","",""]]
+		]
+	}
+},{
+	"id":15,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["interfaceComponent", "0:30", "", ["+operation()","+add(in c: Composite)","+remove(in c: Composite)","+getChild(in i: int)"]],
+			["Leaf", "160:0", "", ["+operation()"]],
+			["Composite", "150:130", "", ["+operation()","+add(in c: Composite)","+remove(in c: Composite)","+getChild (in i: int)"]]
+		],
+		"kids": [
+			[["o_right br t180 solid arrow_romb parent_2","","width:65px;","children"]],
+			[["o_top tc t0 solid arrow_full parent_0","",""]],
+			[]
+		]
+	}
+},{
+	"id":16,
+	"style": "#98cdff",
+	"schema": {
+		"base": [
+			["Director", "0:0", "", ["+construct()"]],
+			["interface\nBuilder", "0:110", "", ["+buildPart()"]],
+			["ConcreteBuilder", "110:90", "", ["+buildPart()","+getResult()"]]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow_romb parent_0","",""]],
+			[["o_top tl t0 solid arrow_full parent_1","",""]]
+		]
+	}
+},{
+	"id":17,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["interface\nComponent", "0:0", "", ["+operation()"]],
+			["ConcreteComponent", "0:120", "", ["+operation()"]],
+			["Decorator", "70:120", "", ["+operation()"]],
+			["ConcreteDecorator", "130:0", "", ["-addedState","+operation()\n+addedBehavior()"]]
+		],
+		"kids": [
+			[["o_bottom br t90 solid arrow_romb parent_2","",""]],
+			[["o_left lc t270 solid arrow_full parent_0","","width:10px;height:70px;"]],
+			[],
+			[["o_right tr t0 solid arrow_full parent_2","",""]]
+		]
+	}
+},{
+	"id":18,
+	"style": "#98cdff",
+	"schema": {
+		"base": [
+			["interface\nProduct", "0:0", "", []],
+			["Creator", "0:130", "", ["+factoryMethod()","+anOperation()"]],
+			["Concrete\nProduct", "125:0", "", []],
+			["Concrete\nCreator", "110:130", "", ["+factoryMethod()"]]
+		],
+		"kids": [
+			[],
+			[],
+			[["o_top tl t0 solid arrow_full parent_0","",""]],
+			[["o_left tl t270 dashed arrow parent_2","",""],["o_top tl t0 solid arrow_full parent_1","",""]]
+		]
+	}
+},{
+	"id":19,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["complex system", "0:0", "220px:220px", [], "#98cdff"],
+			["Facade", "40:80", "", []],
+			["", "90:20", "70px:20px", []],
+			["", "90:130", "70px:20px", []],
+			["", "140:20", "80px:20px", []],
+			["", "140:120", "80px:20px", []]
+		],
+		"kids": [
+			[],
+			[["o_bottom bl t180 solid arrow parent_2","left:10%;",""],["o_bottom bl t180 solid arrow parent_3","left:90%;",""],["o_bottom bl t180 solid arrow parent_4","left:30%;",""],["o_bottom bl t180 solid arrow parent_5","left:70%;",""]],
+			[],
+			[],
+			[],
+			[]
+		]
+	}
+},{
+	"id":20,
+	"style": "#98cdff",
+	"schema": {
+		"base": [
+			["Client", "0:0", "", []],
+			["interface Prototype", "50:40", "", ["+clone()"]],
+			["Concrete\nPrototype1", "140:0", "", ["+clone()"]],
+			["Concrete\nPrototype2", "140:130", "", ["+clone()"]]
+		],
+		"kids": [
+			[["o_right br t180 solid arrow parent_1","",""]],
+			[],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":21,
+	"style": "#fecc99",
+	"schema": {
+		"base": [
+			["FlyweightFactory", "0:0", "", ["+getFlyweight(in key)"]],
+			["interface\nFlyweight", "0:180", "", ["+operation(in extrinsicState)"]],
+			["Client", "80:30", "", []],
+			["Concrete\nFlyweight", "150:10", "", ["-intrinsicState","+operation(in extrinsicState)"]],
+			["Unshared\nConcreteFlyweight", "120:200", "", ["-allState","+operation(in extrinsicState)"]]
+		],
+		"kids": [
+			[],
+			[["o_left tl t270 solid arrow_romb parent_0","",""]],
+			[["o_top tl t0 solid arrow parent_0","left:50%;",""],["o_bottom br t90 solid arrow parent_4","",""],["o_bottom bl t180 solid arrow parent_3","left:30%;",""]],
+			[["o_top tc t0 solid arrow_full parent_1","",""]],
+			[]
+		]
+	}
+},{
+	"id":22,
+	"style": "#98cdff",
+	"schema": {
+		"base": [
+			["Singleton", "0:0", "", ["-static uniqueInstance\n-singletonData","+static instance()\n+SingletonOperation()"]]
+		],
+		"kids": [
+			[]
+		]
+	}
+}
+]

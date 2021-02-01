@@ -1,0 +1,151 @@
+{
+"woodoo": [
+{
+	"id": 0,
+	"title":"Memento",
+	"type":"behavioral",
+	"wiki":"Memento_pattern",
+	"whatitis":"Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later."
+},{
+	"id": 1,
+	"title":"Chain of Responsibility",
+	"type":"Behavioral",
+	"wiki":"Chain-of-responsibility_pattern",
+	"whatitis":"Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it."
+},{
+	"id": 2,
+	"title":"Observer",
+	"type":"Behavioral",
+	"wiki":"Observer_pattern",
+	"whatitis":"Define a one-to-many dependency between objects so that when one object changes state,all its dependents are notified and updated automatically."
+},{
+	"id": 3,
+	"title":"Command",
+	"type":"Behavioral",
+	"wiki":"Command_pattern",
+	"whatitis":"Encapsulate a request as an object, thereby letting you parametrize clients with different requests, queue or log requests, and support undoable operations."
+},{
+	"id": 4,
+	"title":"State",
+	"type":"Behavioral",
+	"wiki":"State_pattern",
+	"whatitis":"Allow an object to alter its behavior when its internal state changes. The object will appear ti change its class."
+},{
+	"id": 5,
+	"title":"Interpreter",
+	"type":"Behavioral",
+	"wiki":"Interpreter_pattern",
+	"whatitis":"Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language."
+},{
+	"id": 6,
+	"title":"Strategy",
+	"type":"Behavioral",
+	"wiki":"Strategy_pattern",
+	"whatitis":"Define a family of algorithms, encapsulate each one, and make them interchangeable. Lets the algorithm vary independently from client that use it."
+},{
+	"id": 7,
+	"title":"Iterator",
+	"type":"Behavioral",
+	"wiki":"Iterator_pattern",
+	"whatitis":"Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation."
+},{
+	"id": 8,
+	"title":"Template Method",
+	"type":"Behavioral",
+	"wiki":"Template_method_pattern",
+	"whatitis":"Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure."
+},{
+	"id": 9,
+	"title":"Mediator",
+	"type":"Behavioral",
+	"wiki":"Mediator_pattern",
+	"whatitis":"Define an object that encapsulates how a set of objects interact. Promotes loose coupling by keeping objects from referring to each other explicitly and it lets you vary their interactions independently."
+},{
+	"id": 10,
+	"title":"Visitor",
+	"type":"Behavioral",
+	"wiki":"Visitor_pattern",
+	"whatitis":"Represent an operation to be performed on the elements of an object structure. Lets you define a new operation without changing the classes of the elements on which it operates."
+},{
+	"id": 11,
+	"title":"Adapter",
+	"type":"Structural",
+	"wiki":"Adapter_pattern",
+	"whatitis":"Convert the interface of a class into another interface clients expect. Lets classes work together that could not otherwise because of incompatible interfaces."
+},{
+	"id": 12,
+	"title":"Proxy",
+	"type":"Structural",
+	"wiki":"Proxy_pattern",
+	"whatitis":"Provide a surrogate or placeholder for another object to control access to it."
+},{
+	"id": 13,
+	"title":"Bridge",
+	"type":"Structural",
+	"wiki":"Bridge_pattern",
+	"whatitis":"Decouple an abstraction from its implementation so that the two can vary independently."
+},{
+	"id": 14,
+	"title":"Abstract Factory",
+	"type":"Creational",
+	"wiki":"Abstract_factory_pattern",
+	"whatitis":"Provides an interface for creating families of related or dependent objects without specifying their concrete class."
+},{
+	"id": 15,
+	"title":"Composite",
+	"type":"Structural",
+	"wiki":"Composite_pattern",
+	"whatitis":"Compose objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions of objects uniformly."
+},{
+	"id": 16,
+	"title":"Builder",
+	"type":"Creational",
+	"wiki":"Builder_pattern",
+	"whatitis":"Separate the construction of a complex object from its representing so that the same construction process can create different representations."
+},{
+	"id": 17,
+	"title":"Decorator",
+	"type":"Structural",
+	"wiki":"Decorator_pattern",
+	"whatitis":"Attach additional responsibilities to an object dynamically. Provide a flexible alternative to sub-classing for extending functionality."
+},{
+	"id": 18,
+	"title":"Factory Method",
+	"type":"Creational",
+	"wiki":"Factory_method_pattern",
+	"whatitis":"Define an interface for creating an object, but let subclasses decide which class to instantiate. Lets a class defer instantiation to subclasses."
+},{
+	"id": 19,
+	"title":"Facade",
+	"type":"Structural",
+	"wiki":"Facade_pattern",
+	"whatitis":"Provide a unfied interface to a set of interfaces in a subsystem. Defines a high-level interface that makes the subsystem easier to use."
+},{
+	"id": 20,
+	"title":"Prototype",
+	"type":"Creational",
+	"wiki":"Prototype_pattern",
+	"whatitis":"Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype."
+},{
+	"id": 21,
+	"title":"Flyweight",
+	"type":"Structural",
+	"wiki":"Flyweight_pattern",
+	"whatitis":"Use sharing to support large numbers of fine grained objects efficiently."
+},{
+	"id": 22,
+	"title":"Singleton",
+	"type":"Creational",
+	"wiki":"Singleton_pattern",
+	"whatitis":"Ensure a class only has one instance and provide a global point access to it."
+}
+],
+"kindof":[
+	{
+		"creational": "Creational patterns are ones that create objects, rather than having to instantiate objects directly. This gives the program more flexibility in deciding which objects need to be created for a given case."
+	},{
+		"structural": "Structural patterns. These concern class and object composition. They use inheritance to compose interfaces and define ways to compose objects to obtain new functionality."
+	},{
+		"behavioral": "Behavioral patterns. Most of these design patterns are specifically concerned with communication between objects."
+	}
+]}

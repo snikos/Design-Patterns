@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <title>Design patterns card</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <section class="container schemaArea mt-1">
+    	<div class="row">
+    		<aside class="col-12">
+    			<div class="form-group mb-1">
+	    			<select id="toggleLand" class="form-control">
+	    				<option value="en">en</option>
+	    				<option value="ru">ru</option>
+	    			</select>
+	    		</div>
+    		</aside>
+    	</div>
+    	<div class="row">
+    		<aside class="col-12 col-lg-6">
+    			<div id="rootid"></div>
+    		</aside>
+    		<aside class="col-12 col-lg-6">
+                <div class="pagibox mt-2 mb-2">
+                    <button type="button" class="go-prev">prev</button>
+                    <div class="pagiover"><ul class="pagination"></ul></div>
+                    <button type="button" class="go-next">next</button>
+                </div>
+    			<div id="desc" class="mb-3">
+    				<h4 id="title">-</h4>
+    				<div><b>Type: </b><span id="type"></span></div>
+                    <div><b>Wiki link: </b><a href="" id="wikiArticle" title="" target="_blank">-</a></div>
+    				<div><b>What's it: </b><span id="whatitis">-</span></div>
+    			</div>
+    		</aside>
+            <aside class="col row mt-3">
+                <ul id="kindofTypes" class="col-12 col-md-3"></ul>
+                <ul id="kindofBox" class="col-12 col-md-9"></ul>
+            </aside>
+    	</div>
+    </section>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
