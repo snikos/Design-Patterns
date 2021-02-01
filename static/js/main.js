@@ -47,7 +47,7 @@ let dpc = {
 	},
 	loaderSchema(key){
 		let that = this;
-		let urlSchema = `/static/json/schema.json`;
+		let urlSchema = `./static/json/schema.json`;
 		fetch(urlSchema)
 		.then( res => res.json() )
 		.then( data => {
