@@ -30,7 +30,7 @@ let dpc = {
 	},
 	loader(lang){
 		let that = this;
-		let url = `/static/json/${lang}_lang.json`;
+		let url = `./static/json/${lang}_lang.json`;
 
 		fetch(url)
 		.then( res => res.json() )
