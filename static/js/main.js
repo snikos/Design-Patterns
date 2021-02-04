@@ -233,7 +233,7 @@ let dpc = {
 			let elLeft = el.offsetLeft;
 			let elWidth = el.clientWidth;
 			let elHeight = el.clientHeight;
-			//console.log(offTop +'|'+ elWidth);
+
 			[].forEach.call( el.children, (child) => {
 				if(child.tagName !== 'SPAN') return;
 				let childClass = (child.classList.value).split(" ");
@@ -258,7 +258,7 @@ let dpc = {
 					if(childClass[3] === 'tr'){
 						let width = tarLeft - (elLeft+elWidth);
 						child.style.width = width+'px';
-					}//??
+					}
 					if(childClass[3] === 't0'){
 						let width = elLeft - (tarLeft+tarWidth/2);
 						let height = (elTop+(elHeight/2)) - (tarTop + tarHeight);
