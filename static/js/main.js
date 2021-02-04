@@ -58,8 +58,7 @@ let dpc = {
 			console.log(err)
 		})
 		.finally( (res) => {
-			//console.log('schema was created')
-			//if(res === undefined) rootid.innerHTML += `<p style="color:tomato">${err}</p>`;
+			//console.log('schema was created');
 		});
 	},
 	init(lang){
