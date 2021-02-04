@@ -245,71 +245,6 @@ let dpc = {
 				let tarWidth = targetElem.clientWidth;
 				let tarHeight = targetElem.clientHeight;
 
-				if ( childClass[1] === 'o_left' ){
-					if(childClass[3] === 't270'){
-						let width = elLeft - (tarLeft+tarWidth);
-						child.style.width = width+'px';
-						child.style.borderWidth = '1px 0 0 0';
-						if(childClass[2] === 'lc'){
-							child.style.width = width - 7 +'px';
-							child.style.borderWidth = '1px 0 1px 1px';
-						}
-					}
-					if(childClass[3] === 'tr'){
-						let width = tarLeft - (elLeft+elWidth);
-						child.style.width = width+'px';
-					}
-					if(childClass[3] === 't0'){
-						let width = elLeft - (tarLeft+tarWidth/2);
-						let height = (elTop+(elHeight/2)) - (tarTop + tarHeight);
-						child.style.width = width+'px';
-						child.style.height = height+'px';
-						child.style.borderWidth = '0 0 1px 1px';
-					}
-					if(childClass[3] === 't180'){
-						let width = elLeft - (tarLeft+tarWidth/2);
-						let height = tarTop - (elTop+(elHeight/2));
-						child.style.width = width+'px';
-						child.style.height = height+'px';
-						child.style.borderWidth = '1px 0 0 1px';
-					}
-				}
-				if ( childClass[1] === 'o_top' ){
-					if(childClass[3] === 't0'){
-						let height = elTop - (tarTop+tarHeight);
-						child.style.height = height+'px';
-						child.style.borderWidth = '0 1px 0 0';
-						if(childClass[2] === 'tc'){
-							let nextElem = arr[idx+1];
-							let nextTop = nextElem.offsetTop;
-							let nextLeft = nextElem.offsetLeft;
-							let nextWidth = nextElem.clientWidth;
-							let nextHeight = nextElem.clientHeight;
-							let width = (nextLeft+nextWidth/2) - (elLeft+(elWidth/2));
-							child.style.height = height - 8 +'px';
-							child.style.width  = width+'px';
-							child.style.borderWidth = '1px 1px 0 1px';
-						}
-					}
-					if(childClass[3] === 't90'){
-						let width = tarLeft - (elLeft+elWidth/2);
-						let height = elTop - (tarTop+tarHeight/2);
-						child.style.width  = width+'px';
-						child.style.height = height+'px';
-						child.style.borderWidth = '1px 0 0 1px';
-					}
-					if(childClass[3] === 't270'){
-						let height = elTop - (tarTop+tarHeight/2);
-						let width = (elLeft+elWidth/2) - (tarLeft+tarWidth);
-						child.style.height = height+'px';
-						child.style.width  = width+'px';
-						child.style.borderWidth = '1px 1px 0 0';
-						if( childClass[2] === 'tl' ){
-							child.style.left = 'auto';
-						    child.style.right = '50%';
-						}
-					}
-				}
 				if ( childClass[1] === 'o_right' ){
 					if(childClass[3] === 't0'){
 						let width =  (tarLeft+tarWidth/2) - (elLeft+elWidth);
@@ -367,6 +302,71 @@ let dpc = {
 						child.style.height = height+'px';
 						child.style.width = width+'px';
 						child.style.borderWidth = '0 1px 1px 0';
+					}
+				}
+				if ( childClass[1] === 'o_left' ){
+					if(childClass[3] === 't0'){
+						let width = elLeft - (tarLeft+tarWidth/2);
+						let height = (elTop+(elHeight/2)) - (tarTop + tarHeight);
+						child.style.width = width+'px';
+						child.style.height = height+'px';
+						child.style.borderWidth = '0 0 1px 1px';
+					}
+					if(childClass[3] === 't180'){
+						let width = elLeft - (tarLeft+tarWidth/2);
+						let height = tarTop - (elTop+(elHeight/2));
+						child.style.width = width+'px';
+						child.style.height = height+'px';
+						child.style.borderWidth = '1px 0 0 1px';
+					}
+					if(childClass[3] === 't270'){
+						let width = elLeft - (tarLeft+tarWidth);
+						child.style.width = width+'px';
+						child.style.borderWidth = '1px 0 0 0';
+						if(childClass[2] === 'lc'){
+							child.style.width = width - 7 +'px';
+							child.style.borderWidth = '1px 0 1px 1px';
+						}
+					}
+					if(childClass[3] === 'tr'){
+						let width = tarLeft - (elLeft+elWidth);
+						child.style.width = width+'px';
+					}
+				}
+				if ( childClass[1] === 'o_top' ){
+					if(childClass[3] === 't0'){
+						let height = elTop - (tarTop+tarHeight);
+						child.style.height = height+'px';
+						child.style.borderWidth = '0 1px 0 0';
+						if(childClass[2] === 'tc'){
+							let nextElem = arr[idx+1];
+							let nextTop = nextElem.offsetTop;
+							let nextLeft = nextElem.offsetLeft;
+							let nextWidth = nextElem.clientWidth;
+							let nextHeight = nextElem.clientHeight;
+							let width = (nextLeft+nextWidth/2) - (elLeft+(elWidth/2));
+							child.style.height = height - 8 +'px';
+							child.style.width  = width+'px';
+							child.style.borderWidth = '1px 1px 0 1px';
+						}
+					}
+					if(childClass[3] === 't90'){
+						let width = tarLeft - (elLeft+elWidth/2);
+						let height = elTop - (tarTop+tarHeight/2);
+						child.style.width  = width+'px';
+						child.style.height = height+'px';
+						child.style.borderWidth = '1px 0 0 1px';
+					}
+					if(childClass[3] === 't270'){
+						let height = elTop - (tarTop+tarHeight/2);
+						let width = (elLeft+elWidth/2) - (tarLeft+tarWidth);
+						child.style.height = height+'px';
+						child.style.width  = width+'px';
+						child.style.borderWidth = '1px 1px 0 0';
+						if( childClass[2] === 'tl' ){
+							child.style.left = 'auto';
+						    child.style.right = '50%';
+						}
 					}
 				}
 			});
